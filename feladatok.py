@@ -54,10 +54,10 @@ def feladat5(szam:int):
         i+=1
     print(legnagyobb_oszto)
 
-"""
+
 # Vizsgáljuk meg, hogy egy adott szám prímszám-e!
 # Az internetről szedtem:(
-def feladat6(szam:int):
+"""def feladat6(szam:int):
     vanoszto = False
     oszto = 2
     while oszto < szam and not vanoszto:
@@ -68,8 +68,23 @@ def feladat6(szam:int):
     if vanoszto:
         print(f"{szam} nem prim szam!")
     else:
-        print(f"{szam} prim szam!")
-"""
+        print(f"{szam} prim szam!")"""
+    
+def prim(x:int):
+    if x<=1:
+        print("Nem prím szám")
+    elif x==2:
+        print("A 2 az egy prím szám")
+    else:
+        oszto_db= 0
+        for i in range(3,x-1,1):
+            if(x%i==0):
+                oszto_db+=1
+                
+        if oszto_db==0:
+            print(f"{x} prím")
+        else:
+            print(f"{x} nem prím")
 
 
 # Számold meg, hogy hány négyzetszám van 0-100000 között!
